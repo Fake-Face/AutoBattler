@@ -129,7 +129,6 @@
   <ItemGroup>
     <ClCompile Include="board.cpp" />
     <ClCompile Include="deck.cpp" />
-    <ClCompile Include="economy.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="render.cpp" />
@@ -137,7 +136,6 @@
   <ItemGroup>
     <ClInclude Include="board.h" />
     <ClInclude Include="deck.h" />
-    <ClInclude Include="economy.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="render.h" />
   </ItemGroup>
