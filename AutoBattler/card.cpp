@@ -17,7 +17,19 @@ Card::~Card()
 
 void Card::useOn(Card card)
 {
-    if(card.cardID == 0){
-
+    if(cardID == 0){
+        int choose;
+        printf("Choose a card to use on: \n");
+        scanf("%d", &choose);
+        //TODO: use card on choosen card from enemy boardDeck
+    }
+    else if(cardID == 1){
+        int n=0;
+        int value;
+        while(GetKeyState(VK_ESCAPE) & 0x8000/*TODO || n>=deckBoard <=> si on a choisi tt les cartes adverses*/){
+            printf("Choose a card to use on or press ESCAPE to leave: \n");
+            scanf("%d", &value);
+            Card card_choose = deckBoard[value];
+        }
     }
 }
