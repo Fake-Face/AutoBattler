@@ -1,7 +1,6 @@
 #pragma once
-class menu
-{
-	menu();
-	~menu();
-};
 
+#include <string>
+#include <stdio.h>
+
+void menu();

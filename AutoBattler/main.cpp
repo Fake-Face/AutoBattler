@@ -1,6 +1,10 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
+#include "menu.h"
+
 
 int main()
 {
-	std::cout << "Hello World!" << std::endl;
+	menu();
+	return 0;
 }

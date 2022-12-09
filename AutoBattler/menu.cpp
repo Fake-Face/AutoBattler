@@ -1,14 +1,14 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include "menu.h"
-#include <string.h>
-#include <stdio.h>
 
 void menu()
 {
 	int e;
 	int action;
 	int fin = 1;
+	int act = 0;
+	int fin2 = 1;
 	
 
 	char partie = 'r';
@@ -26,7 +26,7 @@ void menu()
 	printf("2. Lancer une partie \n");
 	printf("3. Quitter\n");
 
-	printf("VOTRE CHOIX : /n");
+	printf("VOTRE CHOIX : \n");
 
 	e = scanf("%d", &action);
 
@@ -36,10 +36,19 @@ void menu()
 		{
 		case 1:
 			char* Name;
-			printf("taille maximale : 50 caractères \n");
-			printf("Nom du joueur : \n");
+			printf("taille maximale : 50 caracteres \n");
+			printf("Nom du joueur : ");
 			e = scanf("%s", &Name);
-		default:
+			do {
+					switch (act)
+					{
+					default:
+						printf("Appuyer sur R pour revenir au menu");
+						e = scanf("%d", &ReturnMenu);
+						menu();
+						break;
+					}
+			} while (!fin2);
 			break;
 		case 2:
 
@@ -50,4 +59,6 @@ void menu()
 			break;
 		}
 	}
+	return;
 }
+
