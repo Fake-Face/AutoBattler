@@ -1,6 +1,8 @@
 #pragma once
+#include "card.h"
 #include <string>
 #include <vector>
+#include <algorithm>
 
 class deck
 {
