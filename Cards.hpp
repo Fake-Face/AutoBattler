@@ -18,7 +18,7 @@ enum SType{
     PLAYER_HEALER
 };
 
-class Cards{
+class Cards {
     private:
         int manaCost;
         int goldCost;
@@ -39,5 +39,6 @@ class Deck: public Cards{
         std::vector <Cards> handdeck;
         std::vector <Cards> boarddeck;
     public:
+        void getOneCard();
         void shuffle();
 };

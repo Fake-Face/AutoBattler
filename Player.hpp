@@ -11,8 +11,9 @@ class Player{
         int maxGold;
         int maxMana;
         int life;
+        Cards cards;
     public:
-        Player(int l,std::string name,bool alive);
+        Player(int l,std::string name,bool alive,int gold);
         //~Player();
 
         void printAttr();
