@@ -1,13 +1,17 @@
 #pragma once
+#include "player.hpp"
 
-// INCLUDES
-
-class economy
+class Economy
 {
 public:
-	economy();
-	~economy();
-	void setPrice(int price);
-	int getPrice();
-};
+	int goldGive;
+	int goldPay;
+	int refreshCost;
 
+	Economy(int p_goldGive, int p_goldPay, int p_refreshCost);
+	~Economy();
+
+	void give(Player player, int goldGive);
+	void pay(Player player, int goldPay);
+	void refresh();
+};
