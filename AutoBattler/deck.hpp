@@ -1,16 +1,17 @@
 #pragma once
-#include "card.h"
+#include "card.hpp"
 #include <string>
 #include <vector>
 #include <algorithm>
 
-class deck
+class Deck
 {
 private:
     std::vector<Card> cardList;
+
 public:
-    deck(std::vector<Card> p_cardList);
-    ~deck();
+    Deck(std::vector<Card> p_cardList);
+    ~Deck();
 
     void shuffle();
     Card draw();
