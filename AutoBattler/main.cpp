@@ -1,12 +1,41 @@
-#include <iostream>
-#include "player.hpp"
+#include <string>
+#include "economy.hpp"
 
 int main()
 {
-	std::string name;
-	std::cout << "Choisissez votre nom dans le jeu" << std::endl;
-	std::cin >> name;
-	Player p1(30, name, true, 3);
+	Player p1 = Player(100, "Flo");
+	Economy e1 = Economy();
+	Card c = Card(0, "carte", 10, 15, 5, 3);
+	int round = 0;
+
 	p1.printAttr();
+
+	e1.EarnByRound(p1, round);
+	round++;
+	printf("\n");
+	e1.EarnByRound(p1, round);
+	round++;
+	printf("\n");
+	e1.EarnByRound(p1, round);
+	round++;
+	printf("\n");
+	e1.EarnByRound(p1, round);
+	p1.printAttr();
+	e1.GoldRefresh(p1, round);
+	p1.printAttr();
+	e1.GoldBuy(p1, c);
+	p1.printAttr();
+	e1.GoldSell(p1);
+	round++;
+	printf("\n");
+	e1.EarnByRound(p1, round);
+	round++;
+	printf("\n");
+	e1.EarnByRound(p1, round);
+	round++;
+	printf("\n");
+	e1.EarnByRound(p1, round);
+	p1.printAttr();
+
 	return 0;
 }

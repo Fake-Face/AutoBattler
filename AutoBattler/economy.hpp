@@ -1,17 +1,20 @@
 #pragma once
 #include "player.hpp"
+#include "card.hpp"
 
 class Economy
 {
+private:
+	int checkRound;
+	
 public:
-	int goldGive;
-	int goldPay;
-	int refreshCost;
+	int goldRefresh;
 
-	Economy(int p_goldGive, int p_goldPay, int p_refreshCost);
+	Economy();
 	~Economy();
 
-	void give(Player player, int goldGive);
-	void pay(Player player, int goldPay);
-	void refresh();
+	void EarnByRound(Player player, int var);
+	void GoldBuy(Player player, Card card);
+	void GoldSell(Player player);
+	void GoldRefresh(Player player, int var);
 };
