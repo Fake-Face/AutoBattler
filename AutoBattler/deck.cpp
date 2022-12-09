@@ -1,20 +1,20 @@
-#include "deck.h"
+#include "deck.hpp"
 
-deck::deck(std::vector<Card> p_cardList)
+Deck::Deck(std::vector<Card> p_cardList)
 {
     cardList = p_cardList;
 }
 
-deck::~deck()
+Deck::~Deck()
 {
 }
 
-void deck::shuffle()
+void Deck::shuffle()
 {
     std::random_shuffle(cardList.begin(), cardList.end());
 }
 
-Card deck::draw()
+Card Deck::draw()
 {
     Card draw_card = cardList.back();
     cardList.pop_back();
