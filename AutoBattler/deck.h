@@ -1,11 +1,17 @@
 #pragma once
-
-// INCLUDES
+#include "card.h"
+#include <string>
+#include <vector>
+#include <algorithm>
 
 class deck
 {
+private:
+    std::vector<Card> cardList;
 public:
-	deck();
-	~deck();
-};
+    deck(std::vector<Card> p_cardList);
+    ~deck();
 
+    void shuffle();
+    Card draw();
+};
