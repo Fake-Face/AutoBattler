@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <stdio.h>
+#include "entity.hpp"
 
 class Card
 {
@@ -20,4 +21,7 @@ public:
     ~Card();
 
     void useOn(Card card);
+	void minionList();
+	void spellList();
+    void heroList();
 };
