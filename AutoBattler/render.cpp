@@ -35,3 +35,14 @@ void printPlayerStats()
 	std::cout << "║ GOLD : 00 G          ║" << std::endl;
 	std::cout << "╚══════════════════════╝" << std::endl;
 }
+
+void printBoardSeparator()
+{
+	std::cout << "═════════════════════════════════════" << std::endl;
+}
+
+void printHandSeparator()
+{
+	std::cout << "----------------------------------------------------" << std::endl;
+}
+
