@@ -32,7 +32,7 @@ void render::printHero()
 
 void render::printShop()
 {
-	std::cout << "■■■■■■■ SHOP ■■■■■■■" << std::endl;
+	std::cout << "■■■■■■■■■■ SHOP ■■■■■■■■■■" << std::endl;
 }
 
 void render::printPlayerStats(Player *player1, Player *player2)
