@@ -8,9 +8,9 @@ private:
     int currentMana;
     int maxMana;
     int life;
-    int currentGold;
 
 public:
+    int currentGold;
     int maxGold;
     Player(int l, std::string name);
     //~Player();
@@ -22,5 +22,7 @@ public:
 
     //Getter
     int getGold();
+    int getLife();
+    int getMana();
 };
 
