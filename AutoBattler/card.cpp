@@ -16,15 +16,6 @@ Card::~Card()
 {
 }
 
-void Card::useOn(Card card)
-{
-    //TODO
-    //ID 0: On card
-    //ID 1: On multiple cards
-    //ID 2: On player
-	//ID 3: On Card and Player
-	//ID 4: special ID for Hero
-}
 
 // Cards List
 void minionList()

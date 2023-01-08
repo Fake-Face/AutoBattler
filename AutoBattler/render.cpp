@@ -1,51 +1,51 @@
 ﻿#include "render.hpp"
 #include <iostream>
 
-render::render()
+Render::Render()
 {
 }
 
-render::~render()
+Render::~Render()
 {
 }
 
-void render::printMinion()
+void Render::printMinion()
 {
 	std::cout << "╔═══╗" << std::endl;
 	std::cout << "║ M ║" << std::endl;
 	std::cout << "╚═══╝" << std::endl;
 }
 
-void render::printSpell()
+void Render::printSpell()
 {
 	std::cout << "╔═══╗" << std::endl;
 	std::cout << "║ S ║" << std::endl;
 	std::cout << "╚═══╝" << std::endl;
 }
 
-void render::printHero()
+void Render::printHero()
 {
 	std::cout << "╔═══╗" << std::endl;
 	std::cout << "║ H ║" << std::endl;
 	std::cout << "╚═══╝" << std::endl;
 }
 
-void render::printShop()
+void Render::printShop()
 {
 	std::cout << "■■■■■■■■■■ SHOP ■■■■■■■■■■" << std::endl;
 }
 
-void printBoardSeparator()
+void Render::printBoardSeparator()
 {
 	std::cout << "═════════════════════════════════════" << std::endl;
 }
 
-void printHandSeparator()
+void Render::printHandSeparator()
 {
 	std::cout << "----------------------------------------------------" << std::endl;
 }
 
-void render::printPlayerStats(Player *player1, Player *player2)
+void Render::printPlayerStats(Player *player1, Player *player2)
 {
 	printf("\n");
 	printf("╔══════ PLAYER 1 ═══════╗\t\t ╔══════ PLAYER 2 ═══════╗\n");

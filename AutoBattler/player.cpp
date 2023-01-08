@@ -1,12 +1,16 @@
 #include "player.hpp"
 
-Player::Player(int l, std::string name) {
-    life = l;
-    player_name = name;
-    l>0 ? alive = true : alive = false;
+Player::Player()
+{
+    life = 30;
+    life>0 ? alive = true : alive = false;
     currentGold = 5;
     maxGold = 99;
     currentMana = 20;
+}
+
+Player::~Player()
+{
 }
 
 void Player::printAttr() {
@@ -19,10 +23,15 @@ void Player::printAttr() {
     printf("\n");
 }
 
+//Setter
 void Player::changeGold(int gold) {
     currentGold += gold;
 }
+void Player::changeName(std::string name) {
+    player_name = name;
+}
 
+//Getter
 int Player::getGold() {
     return currentGold;
 }

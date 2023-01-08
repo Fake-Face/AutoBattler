@@ -12,17 +12,20 @@ private:
 public:
     int currentGold;
     int maxGold;
-    Player(int l, std::string name);
-    //~Player();
+    
+    Player();
+    ~Player();
 
     void printAttr();
 
     //Setter
     void changeGold(int gold);
+    void changeName(std::string name);
 
     //Getter
     int getGold();
     int getLife();
     int getMana();
+
 };
 

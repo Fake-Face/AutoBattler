@@ -20,7 +20,6 @@ public:
     Card(int p_cardID, std::string p_cardName, int p_life, int p_attack, int p_manaCost, int p_goldCost);
     ~Card();
 
-    void useOn(Card card);
 	void minionList();
 	void spellList();
     void heroList();
