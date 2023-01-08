@@ -13,8 +13,9 @@ public:
 	Economy();
 	~Economy();
 
-	void EarnByRound(Player player, int var);
-	void GoldBuy(Player player, Card card);
-	void GoldSell(Player player);
-	void GoldRefresh(Player player, int var);
+	void EarnByRound(Player *player, int var);
+	void EarnGoldPercentages(Player *player);
+	void GoldBuy(Player *player, Card card);
+	void GoldSell(Player *player);
+	void GoldRefresh(Player *player);
 };

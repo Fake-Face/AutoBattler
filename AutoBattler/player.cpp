@@ -10,9 +10,18 @@ Player::Player(int l, std::string name) {
 
 void Player::printAttr() {
     printf("\n");
-    std::cout << life << std::endl;
-    std::cout << player_name << std::endl;
-    std::cout << (true ? "true" : "false") << std::endl;
-    std::cout << currentGold << std::endl;
+    printf("--------------------\n");
+    printf("Player name: %s \n", player_name.c_str());
+    printf("Player life: %d \n", life);
+    printf("Player gold: %d \n", currentGold);
+    printf("--------------------\n");
     printf("\n");
+}
+
+void Player::changeGold(int gold) {
+    currentGold += gold;
+}
+
+int Player::getGold() {
+    return currentGold;
 }

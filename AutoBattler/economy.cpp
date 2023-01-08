@@ -10,57 +10,54 @@ Economy::~Economy()
 {
 }
 
-void Economy::EarnByRound(Player player, int var)
+void Economy::EarnByRound(Player *player, int var)
 {
-    int goldRound;
-
-    if(var == 0){
-        goldRound = 0;
-        player.currentGold += goldRound;
-    }
-    else if(var==1 || var ==2){
-        goldRound = 2;
-        player.currentGold += goldRound;
+    if(var==1 || var ==2){
+        player->changeGold(2);
     }
     else if(var == 3){
-        goldRound = 3;
-        player.currentGold += goldRound;
+        player->changeGold(3);
     }
-    else{
-        goldRound = 4;
-        player.currentGold += goldRound;
-    }
-
-
-    if(10 <= player.currentGold <= 19){
-        player.currentGold += 1;
-    }
-    else if(20 <= player.currentGold <= 29){
-        player.currentGold += 2;
-    }
-    else if(30 <= player.currentGold <= 39){
-        player.currentGold += 3;
-    }
-    else if(40 <= player.currentGold <= 49){
-        player.currentGold += 4;
-    }
-    else if(50 <= player.currentGold <= player.maxGold){
-        player.currentGold += 5;
+    else if(var >= 4){
+        player->changeGold(4);
     }
 }
 
-void Economy::GoldBuy(Player player, Card card)
-{
-    player.currentGold -= card.goldCost;
+void Economy::EarnGoldPercentages(Player *player){
+    int currentGold = player->getGold();
+
+    if(0 <= currentGold && currentGold <= 9){
+        player->changeGold(0);
+    }
+    else if(10 <= currentGold && currentGold <= 19){
+        player->changeGold(1);
+    }
+    else if(20 <= currentGold && currentGold <= 29){
+        player->changeGold(2);
+    }
+    else if(30 <= currentGold && currentGold <= 39){
+        player->changeGold(3);
+    }
+    else if(40 <= currentGold && currentGold <= 49){
+        player->changeGold(4);
+    }
+    else if(50 <= currentGold && currentGold <= player->maxGold){
+        player->changeGold(5);
+    }
 }
 
-void Economy::GoldSell(Player player)
+void Economy::GoldBuy(Player *player, Card card)
 {
-    player.currentGold += 1;
+    player->changeGold(-card.goldCost);
 }
 
-void Economy::GoldRefresh(Player player, int var)
+void Economy::GoldSell(Player *player)
 {
-    player.currentGold -= goldRefresh;
+    player->changeGold(1);
+}
+
+void Economy::GoldRefresh(Player *player)
+{
+    player->changeGold(-goldRefresh);
     goldRefresh++;
 }
