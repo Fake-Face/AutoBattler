@@ -6,15 +6,21 @@ private:
     std::string player_name;
     bool alive;
     int currentMana;
-    int currentGold;
-    int maxGold;
     int maxMana;
     int life;
+    int currentGold;
 
 public:
-    Player(int l, std::string name, bool alive, int gold);
+    int maxGold;
+    Player(int l, std::string name);
     //~Player();
 
     void printAttr();
+
+    //Setter
+    void changeGold(int gold);
+
+    //Getter
+    int getGold();
 };
 

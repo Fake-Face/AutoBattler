@@ -1,13 +1,21 @@
 #pragma once
+#include "player.hpp"
+#include "card.hpp"
 
-// INCLUDES
-
-class economy
+class Economy
 {
+private:
+	int checkRound;
+	
 public:
-	economy();
-	~economy();
-	void setPrice(int price);
-	int getPrice();
-};
+	int goldRefresh;
 
+	Economy();
+	~Economy();
+
+	void EarnByRound(Player *player, int var);
+	void EarnGoldPercentages(Player *player);
+	void GoldBuy(Player *player, Card card);
+	void GoldSell(Player *player);
+	void GoldRefresh(Player *player);
+};
