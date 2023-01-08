@@ -90,5 +90,11 @@ enum Hero
 	SATAN,			// [ATK = 14] [HP = 12] [MANA = 10] [PASSIVE = attaque le joueur et une carte de manière aléatoire]
 	TYRAN,			// [ATK = 11] [HP = 12] [MANA = 10] [PASSIVE = augmente les dégats de 2 de toutes les cartes sur le plateau]]	
 	ENERGIE_SUPREME	// [ATK = 12] [HP = 13] [MANA = 10] [PASSIVE = toutes les cartes du joueur attaquent l'adversaire en ignorant les boucliers]
-	
 };
+
+struct spawnProbabilities
+{
+	float probaHero = 0.2;
+	float probaSpell = 0.4;
+	float probaMinion = 0.4;
+} typedef spawnProb;

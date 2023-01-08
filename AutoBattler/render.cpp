@@ -24,7 +24,7 @@ void printHero()
 
 void printShop()
 {
-	std::cout << "■■■■■■■ SHOP ■■■■■■■" << std::endl;
+	std::cout << "■■■■■■■■■■ SHOP ■■■■■■■■■■" << std::endl;
 }
 
 void printPlayerStats()
