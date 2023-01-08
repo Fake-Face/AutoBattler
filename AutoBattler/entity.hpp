@@ -1,6 +1,6 @@
 #pragma once
 
-enum Minion
+enum e_Minion
 {
 	// [PRICE = 1] 
 	FANTASSIN, 			// 	[ATTACK = 2] [LIFE = 1] [MANA = 2]
@@ -35,7 +35,7 @@ enum Minion
 	CARDINAL,			//	[ATTACK = 5] [LIFE = 7] [MANA = 5]
 };
 
-enum Spell
+enum e_Spell
 {
 	// [PRICE = 1]
 	BREUVAGE_DE_VIE,		// PLAYER, CARD
@@ -73,7 +73,7 @@ enum Spell
 	ELIXIR_DE_DEGATS		// PLAYER, CARD
 };
 
-enum Hero
+enum e_Hero
 {
 	// [PRICE = 4]
 	DEMI_DIEU,		// [ATTACK = 8] [LIFE = 11] [MANA = 8] [PASSIVE = régénère les LIFE de 1LIFE d'une carte à chaque tour]
