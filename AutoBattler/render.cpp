@@ -35,6 +35,16 @@ void render::printShop()
 	std::cout << "■■■■■■■■■■ SHOP ■■■■■■■■■■" << std::endl;
 }
 
+void printBoardSeparator()
+{
+	std::cout << "═════════════════════════════════════" << std::endl;
+}
+
+void printHandSeparator()
+{
+	std::cout << "----------------------------------------------------" << std::endl;
+}
+
 void render::printPlayerStats(Player *player1, Player *player2)
 {
 	printf("\n");
