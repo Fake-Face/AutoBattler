@@ -5,7 +5,8 @@ Player::Player(int l, std::string name) {
     player_name = name;
     l>0 ? alive = true : alive = false;
     currentGold = 5;
-    maxGold = 100;
+    maxGold = 99;
+    currentMana = 20;
 }
 
 void Player::printAttr() {
@@ -24,4 +25,10 @@ void Player::changeGold(int gold) {
 
 int Player::getGold() {
     return currentGold;
+}
+int Player::getLife() {
+    return life;
+}
+int Player::getMana() {
+    return currentMana;
 }
