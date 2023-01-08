@@ -140,6 +140,7 @@
     <ClInclude Include="card.hpp" />
     <ClInclude Include="deck.hpp" />
     <ClInclude Include="economy.hpp" />
+    <ClInclude Include="entity.hpp" />
     <ClInclude Include="player.hpp" />
     <ClInclude Include="render.hpp" />
   </ItemGroup>
