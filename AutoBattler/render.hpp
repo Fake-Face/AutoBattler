@@ -1,11 +1,17 @@
 #pragma once
+#include "player.hpp"
 
-// INCLUDES
-
-class render
+class Render
 {
 public:
-	render();
-	~render();
-};
+	Render();
+	~Render();
 
+	void printMinion();
+	void printSpell();
+	void printHero();
+	void printShop();
+	void printPlayerStats(Player *player1, Player *player2);
+	void printBoardSeparator();
+	void printHandSeparator();
+};

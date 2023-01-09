@@ -6,10 +6,9 @@
 
 class Deck
 {
-private:
-    std::vector<Card> cardList;
-
 public:
+    std::vector<Card> cardList;
+    
     Deck(std::vector<Card> p_cardList);
     ~Deck();
 

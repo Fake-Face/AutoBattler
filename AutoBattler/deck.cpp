@@ -16,7 +16,13 @@ void Deck::shuffle()
 
 Card Deck::draw()
 {
-    Card draw_card = cardList.back();
-    cardList.pop_back();
-    return draw_card;
+    if(cardList.size() > 0){
+        Card draw_card = cardList.back();
+        cardList.pop_back();
+        return draw_card;
+    }
+    else{
+        Card c = Card(0, "", 0, 0, 0, 0);
+        return c;
+    }
 }
