@@ -12,7 +12,9 @@ private:
 public:
     int currentGold;
     int maxGold;
-    Card handDeck[5];
+    int score;
+    std::vector<Card> handDeck;
+    std::vector<Card> boardDeck;
     
     Player();
     ~Player();
@@ -22,11 +24,12 @@ public:
     //Setter
     void changeGold(int gold);
     void changeName(std::string name);
+    void changeLife(int life);
 
     //Getter
     int getGold();
     int getLife();
     int getMana();
-
+    std::string getName();
 };
 

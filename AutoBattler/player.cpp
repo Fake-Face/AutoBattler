@@ -30,6 +30,9 @@ void Player::changeGold(int gold) {
 void Player::changeName(std::string name) {
     player_name = name;
 }
+void Player::changeLife(int p_life) {
+    life -= p_life;
+}
 
 //Getter
 int Player::getGold() {
@@ -40,4 +43,7 @@ int Player::getLife() {
 }
 int Player::getMana() {
     return currentMana;
+}
+std::string Player::getName() {
+    return player_name;
 }

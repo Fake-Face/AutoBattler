@@ -13,14 +13,13 @@ public:
     Economy economy;
     Render render;
     std::vector<Card> fullDeck;
-    std::vector<Card> handPlayer;
-    std::vector<Card> handBot;
-    std::vector<Card> boardPlayer;
-    std::vector<Card> boardBot;
+    int round;
 
     Game(std::string name);
     ~Game();
 
-    void startGame(Card card);
-    void handToBoard(int carte_A, int carte_B, int carte_C);
+    void startGame(Player *p1, Player *bot, Card card);
+    void handToBoard(Player *p, int carte_A, int carte_B, int carte_C);
+    int fight(Player *p1, Player *p2);
+    void endRound(int value, Player *p, Player *bot);
 };

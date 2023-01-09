@@ -28,4 +28,11 @@ public:
     // void heroList();
 
     std::vector<Card> makeDeckCard(Card card);
+
+    //Getter
+    int getCardLife();
+    int getCardAttack();
+
+    //Setter
+    void setCardLife(int card_life);
 };
