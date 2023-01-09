@@ -12,6 +12,7 @@ private:
 public:
     int currentGold;
     int maxGold;
+    Card handDeck[5];
     
     Player();
     ~Player();

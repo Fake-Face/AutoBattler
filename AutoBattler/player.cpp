@@ -4,7 +4,7 @@ Player::Player()
 {
     life = 30;
     life>0 ? alive = true : alive = false;
-    currentGold = 5;
+    currentGold = 3;
     maxGold = 99;
     currentMana = 20;
 }
