@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <stdio.h>
+#include <vector>
 #include "entity.hpp"
 
 class Card
@@ -17,12 +18,14 @@ private:
 
 public:
     int goldCost;
+    std::vector<Card> deckCard;
     
     Card(int p_cardID, std::string p_cardName, int p_life, int p_attack, int p_manaCost, int p_goldCost);
     ~Card();
 
-    void useOn(Card card);
 	// void minionList();
 	// void spellList();
     // void heroList();
+
+    std::vector<Card> makeDeckCard(Card card);
 };
